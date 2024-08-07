@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" />
+    <link rel="shortcut icon" href="./img/favIcon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="media.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0ae0f22b20.js" crossorigin="anonymous"></script>
+
+    <script src="script.js" defer></script>
+    <script src="backToTopBtn.js" defer></script>
+    <script src="detailedCardRender.js" defer></script>
+
+    <title>POKEDEX</title>
+</head>
+
+
+<body">
+    <!-- NAV BAR -->
+    <section class="nav-bar" id="nav-bar">
+            <div class="nav-sub-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-up"></div>
+                        <div class="logo-center"></div>
+                        <div class="logo-down"></div>
+                    </a>
+                </div>
+                <a href="index.html"><h1>POKEDEX</h1></a>
+            </div>
+
+            <div class="nav-sub-container-search">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-input" id="search-input">
+                    <button class="clear-search-button" id="clear-search-button">X</button>
+                </div>
+            </div>
+    </section>
+
+    <button onclick="scrollToTop()" class="toTopButton" id="toTopButton" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <main class="main">
+        <!-- POKEMON CARDS DISPLAY -->
+        <section class="pokemon-list">
+            <div class="all-pokemon-container">
+                <div class="cards-container" id="cards-container"></div>
+            </div>
+
+            <div class="not-found-message" id="not-found-message">Pokemon was not found.</div>
+        </section>
+
+
+        <!-- DEATILED OVERLAY -->
+        <section class="detailed-overlay" id="detailed-overlay" onclick="hideDetailedOverlay()">
+            <div class="card-display"></div>
+        </section>
+
+        <!-- LOAD MORE POKEMON BUTTON -->
+        <div class="more-pokemon-button-container">
+            <button class="load-more-pokemon-btn" onclick="addMorePokemon()">LOAD MORE POKEMON</button>
+        </div>
+    </main>
+</body>
+</html>
